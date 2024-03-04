@@ -1883,3 +1883,33 @@ textarea.form-input::-webkit-resizer { display: none; }
   bottom: 20%;
   padding: 20px 0;
 }
+
+.butt {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: var(--eerie-black-1);
+  color: var(--orange-yellow-crayola);
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto 370px;
+  
+}
+.butt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+  border-radius: inherit;
+  z-index: -1;
+}
+.butt:hover::before {
+  transform: scale(1.5);
+}
